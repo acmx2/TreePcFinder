@@ -1,0 +1,30 @@
+1. Two binary types could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and 
+a console application SmTreePc.exe (both win32 and x64 versions too). 
+The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. 
+Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.
+
+
+2. Arx usage: load SmTreePc.arx into AutoCad and type PC_ADD.
+Provide a point cloud txt file path as an argument for that command, e.g. PC_ADD z:\pcs\scans\Tree1.txt
+This command shows the cloud and prints the tree parameters. The debug configuration of this command draws a line and two circles correspondent 
+to the measured parameters.
+
+
+3. Console command usage:
+SmTreePc.exe file_name, e.g. SmTreePc.exe z:\pcs\scans\Tree1.txt
+
+
+4. The input point cloud should be in
+* txt point cloud format
+* feet units
+* and should contain a tree scan (or something like tree), one shot scans are allowed.
+
+
+5. Command output looks like the following:
+
+Tree parameters are calculated:
+Height: 29.147949
+Dripline diameter: 23.591715
+Trunk diameter: 0.860223
+
+6. Example screenshot JPG pictures are in the \docs folder. 
