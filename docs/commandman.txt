@@ -1,4 +1,4 @@
-1. Two binary types could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and 
+1. Two types of binaries could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and 
 a console application SmTreePc.exe (both win32 and x64 versions too). 
 The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. 
 Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.
