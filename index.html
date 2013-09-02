@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>TreePcFinder by acmx2</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>TreePcFinder</h1>
+        <p>&quot;Tree Point Cloud Parameters Finder&quot; project repository</p>
+
+        <p class="view"><a href="https://github.com/acmx2/TreePcFinder">View the Project on GitHub <small>acmx2/TreePcFinder</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/acmx2/TreePcFinder/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/acmx2/TreePcFinder/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/acmx2/TreePcFinder">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>The "Tree Point Cloud Parameters Finder" project is a C++ application that allows to determine the tree parameters: height, drip line diameter, trunk diameter from a laser scan point cloud.
+Here are examples of what it measures:
+<img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewA.jpg" alt="Tree 1, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewB.jpg" alt="Tree 1, view B"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewC.jpg" alt="Tree 1, view C"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewD.jpg" alt="Tree 1, view D"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree2_viewA.jpg" alt="Tree 2, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree3_viewA.jpg" alt="Tree 3, view A"></p>
+
+<p>The application source contains a base set of classes for handling the point clouds. </p>
+
+<ol>
+<li><p>Two types of binaries could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and 
+a console application SmTreePc.exe (both win32 and x64 versions too). 
+The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. 
+Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.</p></li>
+<li><p>Arx usage: load SmTreePc.arx into AutoCad and type PC_ADD.
+Provide a point cloud txt file path as an argument for that command, e.g. PC_ADD z:\pcs\scans\Tree1.txt
+This command shows the cloud and prints the tree parameters. The debug configuration of this command draws a line and two circles correspondent 
+to the measured parameters.</p></li>
+<li><p>Console command usage:
+SmTreePc.exe file_name, e.g. SmTreePc.exe z:\pcs\scans\Tree1.txt</p></li>
+<li><p>The input point cloud should be in</p></li>
+<li><p>txt point cloud format</p></li>
+<li><p>feet units</p></li>
+<li><p>and should contain a tree scan (or something like tree), one shot scans are allowed.</p></li>
+<li><p>Command output looks like the following:</p></li>
+</ol><p>Tree parameters are calculated:
+Height: 29.147949
+Dripline diameter: 23.591715
+Trunk diameter: 0.860223</p>
+
+<ol>
+<li>Example screenshot JPG pictures are in the \docs folder. </li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/acmx2">acmx2</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
