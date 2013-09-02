@@ -31,11 +31,17 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>The "Tree Point Cloud Parameters Finder" project is a C++ application that allows to determine the tree parameters: height, drip line diameter, trunk diameter from a laser scan point cloud. Here are examples of what it measures:
+        <h3>
+<a name="tree-point-cloud-parameters-finder" class="anchor" href="#tree-point-cloud-parameters-finder"><span class="octicon octicon-link"></span></a>Tree Point Cloud Parameters Finder</h3>
+
+<p>The "Tree Point Cloud Parameters Finder" project is a C++ application that allows to determine the tree parameters: height, drip line diameter, trunk diameter from a laser scan point cloud. Here are examples of what it measures:
 <img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewA.jpg?raw=true" alt="Tree 1, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewB.jpg?raw=true" alt="Tree 1, view B"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewC.jpg?raw=true" alt="Tree 1, view C"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewD.jpg?raw=true" alt="Tree 1, view D"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree2_viewA.jpg?raw=true" alt="Tree 2, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree3_viewA.jpg?raw=true" alt="Tree 3, view A"></p>
 
+<h3>
+<a name="compilingusage" class="anchor" href="#compilingusage"><span class="octicon octicon-link"></span></a>Compiling/Usage</h3>
+
 <ol>
-<li><p>Two types of binaries could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and a console application SmTreePc.exe (both win32 and x64 versions too). The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.</p></li>
+<li><p>Two types of binaries could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and a Windows console application SmTreePc.exe (both win32 and x64 versions too). The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.</p></li>
 <li><p>Arx usage: load SmTreePc.arx into AutoCad and type PC_ADD. Provide a point cloud txt file path as an argument for that command, e.g. "PC_ADD z:\pcs\scans\Tree1.txt". This command shows the cloud and prints the tree parameters. The debug configuration of this command draws a line and two circles correspondent 
 to the measured parameters.</p></li>
 <li><p>Console command usage: SmTreePc.exe file_name , e.g. "SmTreePc.exe z:\pcs\scans\Tree1.txt"</p></li>
@@ -50,7 +56,19 @@ Dripline diameter: 23.591715
 Trunk diameter: 0.860223</p>
 </blockquote>
 </li>
-</ol>
+</ol><h3>
+<a name="base-idea-behind-the-oo-decomposition-for-the-point-cloud-data-indexing" class="anchor" href="#base-idea-behind-the-oo-decomposition-for-the-point-cloud-data-indexing"><span class="octicon octicon-link"></span></a>Base Idea behind the OO-decomposition for the point cloud data indexing.</h3>
+
+<p>A Container-Indexer-Index decomposition approach is used here as a way for the point cloud data storage and retrieval. </p>
+
+<p>In wide sense, this approach could be described the next way:
+The point cloud points are stored within a Container that has no additional information about them. A point cloud could be read into Container from a file with some Reader.
+After that, depending of a task to solve, particular Index could be built. Basically,
+it's not specified from the beginning if the Index would contain 'back ref indexes' for the points or
+some other data. The Index defines a data structure optimized in some specific sense that we want to apply to the raw data stored within the Container only. We can have as many indexes for a point cloud as we want, as well as we can delete unneeded indexes as soon as possible without the initial data container deletion.<br>
+The Indexer is an abstraction for a correspondence function between the Container and Index. The correspondence is for sure not restricted to be bijection only, it could be surjection too.</p>
+
+<p>This approach allows to have most flexible (because we don't tie the system to some optimized container types like octree or kd-tree from the beginning - we just have a possibility to derive them when needed) and most memory efficient (because we can free memory as soon as particular Index is not needed) solution at the root. The time efficiency is not less than for the usual approaches, since we can easily derive all usual containers on this base without any additional seek/map function introduction. </p>
       </section>
     </div>
 
