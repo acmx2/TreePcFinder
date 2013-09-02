@@ -57,12 +57,12 @@ Trunk diameter: 0.860223</p>
 </blockquote>
 </li>
 </ol><h3>
-<a name="base-idea-behind-the-oo-decomposition-for-the-point-cloud-data-indexing" class="anchor" href="#base-idea-behind-the-oo-decomposition-for-the-point-cloud-data-indexing"><span class="octicon octicon-link"></span></a>Base Idea behind the OO-decomposition for the point cloud data indexing.</h3>
+<a name="base-idea-behind-the-oo-decomposition-for-the-point-cloud-data-indexing" class="anchor" href="#base-idea-behind-the-oo-decomposition-for-the-point-cloud-data-indexing"><span class="octicon octicon-link"></span></a>Base idea behind the OO-decomposition for the point cloud data indexing.</h3>
 
 <p>A Container-Indexer-Index decomposition approach is used here as a way for the point cloud data storage and retrieval. </p>
 
 <p>In wide sense, this approach could be described the next way:
-The point cloud points are stored within a Container that has no additional information about them. A point cloud could be read into Container from a file with some Reader.
+The point cloud points are stored within a Container that has no additional information about them. A point cloud could be read into the Container from a file with some Reader.
 After that, depending of a task to solve, particular Index could be built. Basically,
 it's not specified from the beginning if the Index would contain 'back ref indexes' for the points or
 some other data. The Index defines a data structure optimized in some specific sense that we want to apply to the raw data stored within the Container only. We can have as many indexes for a point cloud as we want, as well as we can delete unneeded indexes as soon as possible without the initial data container deletion.<br>
