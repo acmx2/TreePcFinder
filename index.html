@@ -31,36 +31,25 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>The "Tree Point Cloud Parameters Finder" project is a C++ application that allows to determine the tree parameters: height, drip line diameter, trunk diameter from a laser scan point cloud.
-Here are examples of what it measures:</p>
-
-<p><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewA.jpg?raw=true" alt="Tree 1, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewB.jpg?raw=true" alt="Tree 1, view B"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewC.jpg?raw=true" alt="Tree 1, view C"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewD.jpg?raw=true" alt="Tree 1, view D"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree2_viewA.jpg?raw=true" alt="Tree 2, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree3_viewA.jpg?raw=true" alt="Tree 3, view A"></p>
-
-<p>The application source contains a base set of classes for handling the point clouds. </p>
+        <p>The "Tree Point Cloud Parameters Finder" project is a C++ application that allows to determine the tree parameters: height, drip line diameter, trunk diameter from a laser scan point cloud. Here are examples of what it measures:
+<img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewA.jpg?raw=true" alt="Tree 1, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewB.jpg?raw=true" alt="Tree 1, view B"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewC.jpg?raw=true" alt="Tree 1, view C"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree1_viewD.jpg?raw=true" alt="Tree 1, view D"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree2_viewA.jpg?raw=true" alt="Tree 2, view A"><img src="https://github.com/acmx2/TreePcFinder/blob/master/docs/tree3_viewA.jpg?raw=true" alt="Tree 3, view A"></p>
 
 <ol>
-<li><p>Two types of binaries could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and 
-a console application SmTreePc.exe (both win32 and x64 versions too). 
-The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. 
-Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.</p></li>
-<li><p>Arx usage: load SmTreePc.arx into AutoCad and type PC_ADD.
-Provide a point cloud txt file path as an argument for that command, e.g. PC_ADD z:\pcs\scans\Tree1.txt
-This command shows the cloud and prints the tree parameters. The debug configuration of this command draws a line and two circles correspondent 
+<li><p>Two types of binaries could be compiled from the source: SmTreePc.arx plug-in for AutoCad 2010...2013 (both win32 and x64 versions) and a console application SmTreePc.exe (both win32 and x64 versions too). The console .exe versions are compiled from the Visual Studio project configurations named with 'Console' suffix. Note, the console .exe doesn't depend on the ObjectArx as well as on other libraries except for the standard C++ ones.</p></li>
+<li><p>Arx usage: load SmTreePc.arx into AutoCad and type PC_ADD. Provide a point cloud txt file path as an argument for that command, e.g. "PC_ADD z:\pcs\scans\Tree1.txt". This command shows the cloud and prints the tree parameters. The debug configuration of this command draws a line and two circles correspondent 
 to the measured parameters.</p></li>
-<li><p>Console command usage:
-SmTreePc.exe file_name, e.g. SmTreePc.exe z:\pcs\scans\Tree1.txt</p></li>
-<li><p>The input point cloud should be in</p></li>
-<li><p>txt point cloud format</p></li>
-<li><p>feet units</p></li>
-<li><p>and should contain a tree scan (or something like tree), one shot scans are allowed.</p></li>
-<li><p>Command output looks like the following:</p></li>
-</ol><p>Tree parameters are calculated:
+<li><p>Console command usage: SmTreePc.exe file_name , e.g. "SmTreePc.exe z:\pcs\scans\Tree1.txt"</p></li>
+<li><p>The input point cloud should be in txt point cloud format, in feet units, should contain a tree (or something like tree) scan, one shot scans are allowed.</p></li>
+<li>
+<p>Command output looks like the following:</p>
+
+<blockquote>
+<p>Tree parameters are calculated:
 Height: 29.147949
 Dripline diameter: 23.591715
 Trunk diameter: 0.860223</p>
-
-<ol>
-<li>Example screenshot JPG pictures are in the \docs folder. </li>
+</blockquote>
+</li>
 </ol>
       </section>
     </div>
