@@ -1,10 +1,20 @@
+# Aux files
+*.suo
+*.ncb
+*.htm
+*.html
+*.sdf
+*.user
+proj/vs2010/ipch/
+
 # Compiled Object files
 *.obj
 *.pch
+*.idb
+*.pdb
+tmp/
 
-# Compiled Dynamic libraries
-*.dll
-
-# Compiled Static libraries
+# Compiled output
 *.lib
 *.ilk
+*.exp

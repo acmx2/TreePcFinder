@@ -86,8 +86,8 @@ void Tpc::Processing::CloudHelper::removeSelectedPoints( PointCloud& cloud )
 		nselIntervalBeginIter =nselIntervalEndIter;
 	}
 
-	///swapping the new storage with the old
-	cloud.m_storage.swap(newStorage);
+	///swapping the new storage with the old one
+	std::swap(cloud.m_storage,newStorage);
 }
 
 void Tpc::Processing::CloudHelper::selectHorizontalSlice( PointCloud& cloud, float zMin, float zMax )
