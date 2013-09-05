@@ -2,9 +2,6 @@
 
 #include <string>
 
-using namespace std;
-
-
 #ifndef TPC_ASSERT
 #ifdef TPC_DEBUG
 #define TPC_ASSERT(x) assert(x)
@@ -20,13 +17,13 @@ namespace Tpc
 		class Exception
 		{
 		protected:
-			wstring m_msg;
+			std::wstring m_msg;
 
 		public:
 			explicit Exception(const wchar_t* pMsg =0);
 			virtual ~Exception(void);
 
-			const wstring& getMessage() const;
+			const std::wstring& getMessage() const;
 		};
 
 		class IoException : public Exception

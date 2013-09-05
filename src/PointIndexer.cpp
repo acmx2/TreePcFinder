@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "PointIndexer.h"
+#include "Exception.h"
 #include <vector>
 
 

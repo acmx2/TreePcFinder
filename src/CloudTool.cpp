@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "CloudTool.h"
+#include "Exception.h"
 
 
 using namespace Tpc::Sys;

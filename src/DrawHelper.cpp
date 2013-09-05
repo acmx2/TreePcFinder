@@ -1,5 +1,7 @@
 #include "StdAfx.h"
 #include "DrawHelper.h"
+#include "Exception.h"
+
 
 
 using namespace Tpc::Ui;

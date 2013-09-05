@@ -5,17 +5,16 @@
 #include <string>
 
 
-using namespace Tpc::Sys;
-using namespace std;
-
 namespace Tpc
 {
 	namespace Io
 	{
+		using Tpc::Sys::IoException;
+
 		class TxtReader
 		{
 		private:
-			ifstream m_fileStream;
+			std::ifstream m_fileStream;
 
 		public:
 			TxtReader();
@@ -25,7 +24,7 @@ namespace Tpc
 			bool isAttached() const;
 			void detach();
 
-			bool readLineAndMoveNext(string&) throw (IoException);			
+			bool readLineAndMoveNext(std::string&) throw (IoException);			
 		};
 	}
 }

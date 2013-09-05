@@ -1,16 +1,19 @@
 #pragma once
 
 #include "CloudTool.h"
-#include "Point3d.h"
-
-
-using namespace Tpc::Geom;
 
 
 namespace Tpc
 {
+	namespace Geom
+	{
+		class Point3d;
+	}
+
 	namespace Processing
 	{
+		using Tpc::Geom::Point3d;
+
 		///Owns slices, doesn't own working cloud.
 		class TreeTool : public CloudTool
 		{

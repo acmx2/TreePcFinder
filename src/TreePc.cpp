@@ -42,6 +42,7 @@ BOOL WINAPI DllMain (HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 
 #else
 
+#include "Exception.h"
 #include "UiCommands.h"
 #include <string>
 

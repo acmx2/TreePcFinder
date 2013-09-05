@@ -3,7 +3,6 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
 
 namespace Tpc
 {
@@ -19,7 +18,7 @@ namespace Tpc
 			GuardedPointerVectorT& operator =(const GuardedPointerVectorT&); ///no assignment op
 
 		public:
-			typedef vector<T*> VectorType;
+			typedef std::vector<T*> VectorType;
 
 		protected:
 			VectorType m_vector;

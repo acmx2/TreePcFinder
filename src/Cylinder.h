@@ -4,8 +4,6 @@
 #include <vector>
 
 
-using namespace std;
-
 namespace Tpc
 {
 	namespace Geom
@@ -31,6 +29,6 @@ namespace Tpc
 			bool containsXy(const Point3d&) const;
 		};
 
-		typedef vector<Cylinder> CylinderVector;
+		typedef std::vector<Cylinder> CylinderVector;
 	}
 }

@@ -1,8 +1,8 @@
 #include "StdAfx.h"
 #include "CloudHelper.h"
+#include "Exception.h"
 #include "Point3d.h"
 #include "PointCloud.h"
-#include "Exception.h"
 #include "PointCloudBuilder.h"
 #include "Cylinder.h"
 #include <vector>
@@ -11,11 +11,11 @@
 #include <math.h>
 #include <cfloat>
 
+
 using namespace Tpc::Sys;
 using namespace Tpc::Geom;
 using namespace Tpc::Base;
 using namespace Tpc::Processing;
-using namespace std;
 
 
 void Tpc::Processing::CloudHelper::recalculateCloudBox( PointCloud& cloud )

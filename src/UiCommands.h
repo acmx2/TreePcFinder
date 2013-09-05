@@ -1,11 +1,5 @@
 #pragma once
 
-#include "Exception.h"
-#include "Point3d.h"
-
-
-using namespace Tpc::Sys;
-using namespace Tpc::Geom;
 
 namespace Tpc
 {

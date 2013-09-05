@@ -3,8 +3,6 @@
 #include "Settings.h"
 #include <vector>
 
-using namespace Tpc::Sys;
-using namespace std;
 
 namespace Tpc
 {
@@ -92,6 +90,6 @@ namespace Tpc
 			return Point3d(pt.x/c, pt.y/c, pt.z/c);
 		}
 
-		typedef vector<Point3d> Point3dVector;
+		typedef std::vector<Point3d> Point3dVector;
 	}
 }

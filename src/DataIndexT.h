@@ -1,17 +1,16 @@
 #pragma once
 
-#include "PointIndexer.h"
+#include "Point3d.h"
 #include <vector>
 #include <map>
 
-using namespace std;
-using namespace Tpc::Geom;
-using namespace Tpc::Sys;
 
 namespace Tpc
 {
 	namespace Base
 	{
+		using Tpc::Geom::Point3d;
+
 		///TM is a std::map<int,TD>, unsorted_map or smth. like that. Shouldn't be multimap.
 		///TD is a data structure
 		///TX is a PointIndexer
@@ -148,7 +147,7 @@ namespace Tpc
 			{
 				return !(find(pt).isOutOfRangeOf(*this));
 			}
-			vector<int> filterExistingKeys(const vector<int>& v) const
+			std::vector<int> filterExistingKeys(const std::vector<int>& v) const
 			{
 				vector<int> retV;
 				for (vector<int>::const_iterator i =v.begin(); i !=v.end(); i++)

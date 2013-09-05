@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "Point3d.h"
+#include "Exception.h"
 #include <math.h>
 #include <cfloat>
 

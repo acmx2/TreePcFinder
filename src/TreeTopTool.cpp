@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "TreeTopTool.h"
+#include "Exception.h"
 #include "CloudHelper.h"
 #include "PointCloud.h"
 #include "Settings.h"

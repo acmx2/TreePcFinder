@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "PointCloudBuilder.h"
+#include "Exception.h"
 #include "PointCloud.h"
 #include "TxtReader.h"
 #include "Settings.h"

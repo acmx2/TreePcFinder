@@ -25,6 +25,7 @@
 #include "StdAfx.h"
 
 
+#include "Exception.h"
 #include "UiCommands.h"
 
 

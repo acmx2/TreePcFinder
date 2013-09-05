@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "MathHelper.h"
+#include "Exception.h"
 #include <vector>
 #include <algorithm>
 #include <math.h>

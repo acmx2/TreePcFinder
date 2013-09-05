@@ -1,9 +1,5 @@
 #pragma once
 
-#include "Exception.h"
-
-using namespace Tpc::Sys;
-
 namespace Tpc
 {
 	namespace Base
@@ -11,10 +7,10 @@ namespace Tpc
 		class PointCloud;
 	}
 
-	using namespace Tpc::Base;
-
 	namespace Processing
 	{
+		using Tpc::Base::PointCloud;
+
 		///Working cloud is passed in on init. The tool doesn't own it.
 		class CloudTool
 		{

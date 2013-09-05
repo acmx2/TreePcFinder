@@ -1,12 +1,8 @@
 #pragma once
 
-#include "Exception.h"
 #include "PointCloud.h"
 #include "PointCloudIndex.h"
 
-
-using namespace Tpc::Sys;
-using namespace Tpc::Base;
 
 namespace Tpc
 {
@@ -15,10 +11,13 @@ namespace Tpc
 		class Cylinder;
 	}
 
-	using namespace Tpc::Geom;
-
 	namespace Processing
 	{
+		using Tpc::Base::PointCloud;
+		using Tpc::Base::PointCloudVector;
+		using Tpc::Base::PointCloudIndexXy;
+		using Tpc::Geom::Cylinder;
+
 		class CloudHelper
 		{
 		private:

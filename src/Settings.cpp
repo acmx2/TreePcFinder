@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "Settings.h"
+#include "Exception.h"
 
 
 using namespace Tpc::Sys;

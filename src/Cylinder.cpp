@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "Cylinder.h"
+#include "Exception.h"
 
 
 using namespace Tpc::Geom;

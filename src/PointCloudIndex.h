@@ -2,6 +2,7 @@
 
 #include "Point3d.h"
 #include "DataIndexT.h"
+#include "PointIndexer.h"
 #include <vector>
 #include <cfloat>
 

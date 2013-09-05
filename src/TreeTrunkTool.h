@@ -5,13 +5,12 @@
 #include "Point3d.h"
 
 
-using namespace Tpc::Geom;
-
-
 namespace Tpc
 {
 	namespace Processing
 	{
+		using Tpc::Geom::Point3d;
+
 		class TreeTrunkTool : public CloudTool
 		{
 		private:

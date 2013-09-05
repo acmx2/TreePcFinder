@@ -5,16 +5,15 @@
 #include "PointCloud.h"
 
 
-using namespace Tpc::Sys;
-using namespace Tpc::Geom;
-using namespace Tpc::Base;
-
-
 namespace Tpc
 {
 	namespace Ui
 	{
 #ifdef _ACRXAPP
+		using Tpc::Sys::Exception;
+		using Tpc::Geom::Point3d;
+		using Tpc::Base::PointCloud;
+
 		class DrawHelper
 		{
 		private:

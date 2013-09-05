@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "PointCloud.h"
+#include "Exception.h"
 #include <cfloat>
 
 using namespace Tpc::Base;

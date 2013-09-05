@@ -1,9 +1,7 @@
 #pragma once
 
-
 #include <vector>
 
-using namespace std;
 
 namespace Tpc
 {
@@ -16,9 +14,9 @@ namespace Tpc
 			~MathHelper(void);  ///no dtor
 
 		public:
-			static vector<float> truncateFunction( const vector<float>&, float );
-			static float calculatePlateauValue( const vector<float>&, float , float , float );
-			static int calculateBestPositionForValue( const vector<float>&, float ); ///calculates best pos =inverse_func(val)
+			static std::vector<float> truncateFunction( const std::vector<float>&, float );
+			static float calculatePlateauValue( const std::vector<float>&, float , float , float );
+			static int calculateBestPositionForValue( const std::vector<float>&, float ); ///calculates best pos =inverse_func(val)
 		};
 	}
 }
