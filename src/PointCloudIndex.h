@@ -3,12 +3,7 @@
 #include "Point3d.h"
 #include "DataIndexT.h"
 #include "PointIndexer.h"
-#include <vector>
-#include <cfloat>
 
-
-using namespace Tpc::Geom;
-using namespace std;
 
 namespace Tpc
 {
@@ -16,7 +11,7 @@ namespace Tpc
 	{
 		struct PointCell
 		{
-			Point3d center;
+			Tpc::Geom::Point3d center;
 			PointCell()
 			{
 			}
@@ -32,7 +27,7 @@ namespace Tpc
 			}
 		};
 
-		typedef DataIndexT<DataCell,PointIndexerXy> PointCloudIndexXy;
-		/// not used: 	typedef DataIndexT<DataCell,PointIndexer3d> PointCloudIndex3d;  
+		typedef DataIndexT<DataCell,Tpc::Geom::PointIndexerXy> PointCloudIndexXy;
+		/// can be used: 	typedef DataIndexT<DataCell,PointIndexer3d> PointCloudIndex3d;  
 	}
 }

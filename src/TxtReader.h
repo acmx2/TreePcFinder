@@ -9,8 +9,6 @@ namespace Tpc
 {
 	namespace Io
 	{
-		using Tpc::Sys::IoException;
-
 		class TxtReader
 		{
 		private:
@@ -20,11 +18,11 @@ namespace Tpc
 			TxtReader();
 			~TxtReader(void);
 
-			void attachTo(const char*) throw (IoException);
+			void attachTo(const char*) throw (Tpc::Sys::IoException);
 			bool isAttached() const;
 			void detach();
 
-			bool readLineAndMoveNext(std::string&) throw (IoException);			
+			bool readLineAndMoveNext(std::string&) throw (Tpc::Sys::IoException);			
 		};
 	}
 }

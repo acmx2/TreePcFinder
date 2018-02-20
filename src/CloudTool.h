@@ -9,23 +9,21 @@ namespace Tpc
 
 	namespace Processing
 	{
-		using Tpc::Base::PointCloud;
-
-		///Working cloud is passed in on init. The tool doesn't own it.
+		///Working cloud is provided on init. The tool doesn't own it.
 		class CloudTool
 		{
 		protected:
-			PointCloud* m_pWorkingCloud;
+			Tpc::Base::PointCloud* m_pWorkingCloud;
 
 		public:
 			CloudTool(void);
 			virtual ~CloudTool(void);
 
-			virtual void init(PointCloud*);
+			virtual void init(Tpc::Base::PointCloud*);
 			virtual bool isInitialized() const;
 
-			const PointCloud& getWorkingCloud() const;
-			PointCloud& getWorkingCloud();
+			const Tpc::Base::PointCloud& getWorkingCloud() const;
+			Tpc::Base::PointCloud& getWorkingCloud();
 		};
 	}
 }

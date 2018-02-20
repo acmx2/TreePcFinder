@@ -4,17 +4,12 @@
 #include "PointCloudIndex.h"
 
 
-using namespace Tpc::Sys;
-using namespace Tpc::Geom;
-
 namespace Tpc
 {
 	namespace Io
 	{
 		class TxtReader;
 	}
-
-	using namespace Tpc::Io;
 
 	namespace Base
 	{
@@ -27,8 +22,8 @@ namespace Tpc
 			~PointCloudBuilder(void); /// no dtor
 
 		public:
-			static void buildCloudFromArray(PointCloud&, const Point3dVector&);
-			static void buildCloudFromTxtReader(PointCloud&,  TxtReader&) throw(IoException);
+			static void buildCloudFromArray(PointCloud&, const Tpc::Geom::Point3dVector&);
+			static void buildCloudFromTxtReader(PointCloud&,  Tpc::Io::TxtReader&) throw(Tpc::Sys::IoException);
 			static void buildIndexXy(PointCloud&,PointCloudIndexXy&,float,bool bForSelectedOnly =false);
 			static void buildCloudFromIndexXy(PointCloudIndexXy&,PointCloud&,bool bFromSelectedOnly =false);
 		};

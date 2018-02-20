@@ -4,8 +4,6 @@
 #include <vector>
 
 
-using namespace std;
-
 namespace Tpc
 {
 	namespace Geom
@@ -40,8 +38,8 @@ namespace Tpc
 
 			int calculatePointKey(const Point3d&) const;
 			const Point3d calculateKeyCenterPoint(int) const;
-			vector<int> calculatePointVicinityKeys(const Point3d&, float) const;
-			vector<int> calculateKeyVicinityKeys(int, float) const;
+			std::vector<int> calculatePointVicinityKeys(const Point3d&, float) const;
+			std::vector<int> calculateKeyVicinityKeys(int, float) const;
 		};
 
 		// for the future: class PointIndexer3d;

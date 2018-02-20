@@ -5,9 +5,6 @@
 #include "GuardedPointerVectorT.h"
 #include <vector>
 
-using namespace std;
-using namespace Tpc::Geom;
-using namespace Tpc::Sys;
 
 namespace Tpc
 {
@@ -32,11 +29,11 @@ namespace Tpc
 		public:
 			struct CloudData
 			{
-				Box boundingBox;
-				Point3d center;
+				Tpc::Geom::Box boundingBox;
+				Tpc::Geom::Point3d center;
 				float sigma;
 				float sigmaXy;
-				Point3d diameterCenterXy;
+				Tpc::Geom::Point3d diameterCenterXy;
 				float diameterXy;
 
 				CloudData();
@@ -67,16 +64,16 @@ namespace Tpc
 			};
 			struct Point
 			{
-				Point3d pt;
+				Tpc::Geom::Point3d pt;
 				PointData data;				
-				inline explicit Point(const Point3d& x)
+				inline explicit Point(const Tpc::Geom::Point3d& x)
 					: pt(x)
 				{
 				}
 			};
 
 		protected:
-			typedef vector<Point> StorageType;
+			typedef std::vector<Point> StorageType;
 			typedef StorageType::const_iterator StorageConstIteratorType;
 			typedef StorageType::iterator StorageIteratorType;
 
@@ -150,6 +147,6 @@ namespace Tpc
 			void unselectAll();
 		};
 
-		typedef GuardedPointerVectorT<PointCloud> PointCloudVector;
+		typedef Tpc::Sys::GuardedPointerVectorT<PointCloud> PointCloudVector;
 	}
 }

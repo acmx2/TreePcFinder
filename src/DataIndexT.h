@@ -9,9 +9,7 @@ namespace Tpc
 {
 	namespace Base
 	{
-		using Tpc::Geom::Point3d;
-
-		///TM is a std::map<int,TD>, unsorted_map or smth. like that. Shouldn't be multimap.
+		///TM is a std::map<int,TD> or an unsorted_map. Shouldn't be multimap.
 		///TD is a data structure
 		///TX is a PointIndexer
 		template <typename TD, typename TX, typename TM = std::map<int,TD> >
@@ -129,12 +127,12 @@ namespace Tpc
 				StorageIteratorType iter =m_storage.find(key);
 				return Iterator(iter);
 			}
-			ConstIterator find(const Point3d& pt) const
+			ConstIterator find(const Tpc::Geom::Point3d& pt) const
 			{
 				int key =m_indexer.calculatePointKey(pt);
 				return findByKeyConst(key);
 			}
-			Iterator find(const Point3d& pt)
+			Iterator find(const Tpc::Geom::Point3d& pt)
 			{
 				int key =m_indexer.calculatePointKey(pt);
 				return findByKey(key);
@@ -143,7 +141,7 @@ namespace Tpc
 			{
 				return !(findByKeyConst(key).isOutOfRangeOf(*this));
 			}
-			bool contains(const Point3d& pt) const
+			bool contains(const Tpc::Geom::Point3d& pt) const
 			{
 				return !(find(pt).isOutOfRangeOf(*this));
 			}
@@ -159,7 +157,7 @@ namespace Tpc
 				}
 				return retV;
 			}
-			Iterator insertingFind(const Point3d& pt)
+			Iterator insertingFind(const Tpc::Geom::Point3d& pt)
 			{
 				int key =m_indexer.calculatePointKey(pt);
 				std::pair<StorageIteratorType,bool> retPair =m_storage.insert(StorageType::value_type(key,TD()));

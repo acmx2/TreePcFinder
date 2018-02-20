@@ -12,8 +12,6 @@ namespace Tpc
 
 	namespace Processing
 	{
-		using Tpc::Geom::Point3d;
-
 		///Owns slices, doesn't own working cloud.
 		class TreeTool : public CloudTool
 		{
@@ -23,12 +21,12 @@ namespace Tpc
 			float m_driplineDiameter;
 
 			Point3d estimateTreeCenterXy();
-			float calculateRootZ(const Point3d&, float) const;
+			float calculateRootZ(const Tpc::Geom::Point3d&, float) const;
 
 #ifdef TPC_DEBUG
-			void debugDrawCenterline(const Point3d&) const;
-			void debugDrawTrunkSection(const Point3d&,float) const;
-			void debugDrawVerticalDimLine(const Point3d&,float,float) const;
+			void debugDrawCenterline(const Tpc::Geom::Point3d&) const;
+			void debugDrawTrunkSection(const Tpc::Geom::Point3d&,float) const;
+			void debugDrawVerticalDimLine(const Tpc::Geom::Point3d&,float,float) const;
 #endif
 
 		public:

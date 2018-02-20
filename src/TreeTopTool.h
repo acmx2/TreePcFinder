@@ -12,8 +12,6 @@ namespace Tpc
 
 	namespace Processing
 	{
-		using Tpc::Geom::Point3d;
-
 		class TreeTopTool : public CloudTool
 		{
 		private:
@@ -21,12 +19,12 @@ namespace Tpc
 			float m_apexZ;
 
 #ifdef TPC_DEBUG
-			static void debugDrawCluster(const PointCloud&, float);
-			static void debugDrawDriplineCircle(const Point3d&,float);
+			static void debugDrawCluster(const Tpc::Base::PointCloud&, float);
+			static void debugDrawDriplineCircle(const Tpc::Geom::Point3d&,float);
 #endif
 
-			void calculateDriplineDiameterAndCenter(float&,Point3d&);
-			float calculateTopZ(float,const Point3d&) const;
+			void calculateDriplineDiameterAndCenter(float&,Tpc::Geom::Point3d&);
+			float calculateTopZ(float,const Tpc::Geom::Point3d&) const;
 
 		public:
 			TreeTopTool(void);
